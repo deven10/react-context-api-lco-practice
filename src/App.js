@@ -3,10 +3,6 @@ import React from 'react';
 import Context from './Context';
 import Provider from './Provider';
 
-// const Agents = () => {
-
-// }
-
 const AgentBond = () => {
   return(
       <Context.Consumer>                    

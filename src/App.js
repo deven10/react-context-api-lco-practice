@@ -9,18 +9,18 @@ import Provider from './Provider';
 
 const AgentBond = () => {
   return(
-      <Context.Consumer>                 {/* creating the consumer where data will be fetched from the provider and used */}
-        {
-          (context) => (                // context => refers to the data which is being passed by the provider
+      <Context.Consumer>                    
+        {                                   // creating the consumer where data will be fetched from the provider and use
+          (context) => (                    // context => refers to the data which is being passed by the provider
             <>
-              <h2>
-                  Hello {context.data.agentName}  {/* getting the agentName from the data passed via provider, wherein our state is present. */}
+              <h2>                              
+                  Hello {context.data.agentName}  
               </h2>
               <h3>Mission name: {context.data.mname}</h3>
               <p>Mission Status: {context.data.accept}</p>
-              <button onClick={context.isMissionAccepted}>Accept the Mission!</button>  {/* calling the method isMissionAccepted which will update the "accept state" */}
+              <button onClick={context.isMissionAccepted}>Accept the Mission!</button> 
             </>
-          )
+          )                                 // getting all the details as "data" from the provider using "context"
         }
       </Context.Consumer>
   )
